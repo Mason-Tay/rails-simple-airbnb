@@ -1,0 +1,44 @@
+<div class = "container mt-5">
+  <h1><strong><%= @flat.name%> apartment</strong>
+    <large>
+        <%= link_to edit_flat_path do %>
+            <i class="fas fa-pencil-alt"></i>
+        <% end %>
+        <%= link_to flat_path(@flat), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fas fa-trash-alt"></i>
+        <% end %>
+    </large>
+  </h1>
+  <br>
+  <div class = "card p-5">
+  <img src="../../assets/Desktop.PNG" class="card-img-top" alt="Map">
+  </div>
+  <br>
+
+  <div class="card">
+    <div class="card-header">
+      <h4> <strong>Location</strong> </h4>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"><%= @flat.address %></h5>
+    </div>
+  </div>
+  <br>
+
+    <div class="card">
+    <div class="card-body">
+        <h5 class="card-title font-weight-bold">A bit more about this apartment</h5>
+        <p class="card-text"><%=@flat.description %></p>
+
+    </div>
+  </div>
+  <br>
+
+    <div class="card">
+    <div class="card-body">
+        <h5 class="card-title font-weight-bold">Details</h5>
+        <p class="card-text">Guests: <%=@flat.number_of_guests%></p>
+        <p class="card-text">Price per night: $<%=@flat.price_per_night%></p>
+    </div>
+  </div>
+</div>

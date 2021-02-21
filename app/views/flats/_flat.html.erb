@@ -1,0 +1,12 @@
+<div class="card">
+  <img src="https://source.unsplash.com/1600x900/" class="card-img-top" alt="<%= flat.name %>">
+  <div class="card-body flex-container flex-column justify-content-between">
+    <div>
+        <h5 class="card-title font-weight-bold"><%= flat.name %> apartment</h5>
+        <p class="card-text "><%= flat.description %></p>
+    </div>
+    <div>
+        <%= link_to 'View', flat, class: 'btn btn-info btn-block align-bottom'  %>
+    </div>
+  </div>
+</div>
